@@ -1,6 +1,10 @@
 # DIO - Trilha .NET - Programação orientada a objetos
 www.dio.me
 
+## Mudanças que implementei 🚩
+- Eu tornei alguns dos métodos assícronos, para que o programa ficasse ocioso por alguns segundos em algumas ações. 
+- Também implementei uma classe estática que possui métodos estáticos para gerar alguns valores aleatórios, que serão preenchidos nos atributos dos celulares.
+
 ## Desafio de projeto
 Para este desafio, você precisará usar seus conhecimentos adquiridos no módulo de orientação a objetos, da trilha .NET da DIO.
 
