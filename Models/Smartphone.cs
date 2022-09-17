@@ -10,24 +10,28 @@ namespace DesafioPOO.Models
         private int Memoria { get; set; }
 
         //Contrutor que gera aleatoriamente um IMEI
-        public Smartphone(string numero, int memoria)
+        public Smartphone(string numero, int memoria, string modelo)
         {
             Numero = numero;
             IMEI = AttributesHelper.GenerateIMEI();
             Memoria = memoria;
+            Modelo = modelo;
         }
         
-
-        public void Ligar()
+        public async Task Ligar()
         {
             Console.WriteLine("Ligando...");
+            await Task.Delay(2000);
+            Console.WriteLine("Ele não atendeu");
         }
 
-        public void ReceberLigacao()
+        public async Task ReceberLigacao()
         {
             Console.WriteLine("Recebendo ligação...");
+            await Task.Delay(2300);
+            Console.WriteLine("Ligação não atendida");
         }
 
-        public abstract void InstalarAplicativo(string nomeApp);
+        public abstract Task InstalarAplicativo(string nomeApp);
     }
 }
