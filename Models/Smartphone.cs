@@ -10,13 +10,13 @@ namespace DesafioPOO.Models
         private int Memoria { get; set; }
 
         //Contrutor que gera aleatoriamente um IMEI
-        //É possível que outros contrutores sejam criado, mas passando uma quantidade diferente de parêmtros. Cada smartphone tem os seus (ou não os tem)
-        public Smartphone(string numero, int memoria, string imei)
+        public Smartphone(string numero, int memoria)
         {
             Numero = numero;
-            IMEI = imei;
+            IMEI = AttributesHelper.GenerateIMEI();
             Memoria = memoria;
         }
+        
 
         public void Ligar()
         {
