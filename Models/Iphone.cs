@@ -5,16 +5,17 @@ namespace DesafioPOO.Models
     // TODO: Herdar da classe "Smartphone"
     public class Iphone : Smartphone
     {
+        
 
-        public Iphone(string numero, int memoria) : base(numero, memoria)
+        public override async Task InstalarAplicativo(string nomeApp)
         {
+            Console.WriteLine($"Iniciando instalação do aplicativo '{nomeApp}' no dispositivo iPhone...");
+            await Task.Delay(4000);
+            Console.WriteLine("Aplicativo instalado com sucesso!");
         }
 
-        public override void InstalarAplicativo(string nomeApp)
+        public Iphone(string numero, int memoria, string modelo) : base(numero, memoria, modelo)
         {
-            Console.WriteLine("Iniciando instalação do aplicativo no dispositivo iPhone...");
-            Task.Delay(2000);
-            Console.WriteLine("Aplicativo instalado com sucesso!");
         }
     }
 }
